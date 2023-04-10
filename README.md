@@ -1,46 +1,23 @@
-# Getting Started with Create React App
+# Crypted Frontend 과제
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tabview 
+### 1. tab 기능을 수행하는 컴포넌트를 구현 ([CryptedTab.tsx](src%2Fcomponent%2Ftab%2FCryptedTab.tsx)) 
+#### 예시된 CryptedTab, CryptedTabHeader 간 function은 정의만 해두었지만 원하시는 방법이 있으면 변경하셔도 무관합니다.
+#### 단 header click 이벤트 선택에 따라 화면은 변경되어야 합니다.
+#### 제약조건은 없으며 3. 문제인 무한스크롤에 대한 scroll 유지 되어야 하는 조건도 없습니다.
 
-## Available Scripts
+### 2. [TabOrigin.tsx](src%2Fcomponent%2Ftab%2FTabOrigin.tsx) 구현
+#### [transaction.json](src%2Fdata%2Ftransaction.json) 내용을 리스트 뷰 형태로 출력
+#### 뷰형식은 아래와 같이 출력 바랍니다. (디자인은 자유)
+```
+   (성공/실패) : status <br/>
+   (토큰심볼) : symbol <br/>
+   (금액) : amount <br/>
+   (from) : fromAddressForDisplay <br/>
+   (to) : toAddressForDisplay <br/>
+```
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. [TabInfinityScroll.tsx](src%2Fcomponent%2Ftab%2FTabInfinityScroll.tsx) 구현
+#### UI는 2번과 동일하게 구현하셔도 됩니다. 
+#### 단 window scroll 이 bottom 이동시 동일한 데이터 로드하는 무한 스크롤을 구현되어야 합니다. 
+#### library 사용제한은 없으며 데이터는 제공된 [transaction.json](src%2Fdata%2Ftransaction.json) 10개의 리스트가 다시 화면에 계속 추가 되면 됩니다.
