@@ -28,3 +28,5 @@
 #### UI는 2번과 동일하게 구현하셔도 됩니다. 
 #### 단 window scroll 이 bottom 이동시 동일한 데이터 로드하는 무한 스크롤을 구현되어야 합니다. 
 #### library 사용제한은 없으며 데이터는 제공된 [transaction.json](src%2Fdata%2Ftransaction.json) 10개의 리스트가 다시 화면에 계속 추가 되면 됩니다.
+
+문의사항은 aiden.lim@crypted.co.kr 문의 바랍니다.
