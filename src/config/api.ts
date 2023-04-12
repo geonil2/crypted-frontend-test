@@ -1,4 +1,5 @@
 import axios, { AxiosError } from "axios";
+
 import { showAlert } from "src/components/globalAlert";
 
 export const API = axios.create();

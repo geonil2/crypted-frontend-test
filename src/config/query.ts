@@ -1,5 +1,5 @@
-import { isAxiosError } from "./api";
 import { QueryClient } from "@tanstack/react-query";
+import { isAxiosError } from "./api";
 
 const retry = (failCount: number, error: unknown): boolean => {
   if (isAxiosError(error)) {

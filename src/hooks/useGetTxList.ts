@@ -1,5 +1,6 @@
-import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+
 import { getTxListApi } from "src/services/transaction/apis";
 import { getTxListQueryKey, Tx } from "src/services/transaction/types";
 
