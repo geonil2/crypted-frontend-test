@@ -3,15 +3,12 @@ import styled from "styled-components";
 
 import { COLORS, MEDIA, SHADOW } from "src/config/styles";
 
-import CryptedTab from "src/components/tab/CryptedTab";
-import TabOrigin from "src/components/tab/TabOrigin";
-import TabInfinityScroll from "src/components/tab/TabInfinityScroll";
+import { CryptedTab, TabInfinityScroll, TabOrigin } from "src/components/tab";
 
 const TabviewCtnr = styled.div`
   width: 100%;
   height: 90vh;
   max-width: 500px;
-  /* background-color: ${COLORS.white}; */
   background: ${COLORS.gradient};
   box-shadow: ${SHADOW.basic};
   border-radius: 5px;

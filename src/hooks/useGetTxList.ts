@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
-import { getTxListApi } from "src/services/transaction/apis";
-import { getTxListQueryKey, Tx } from "src/services/transaction/types";
+import { getTxListApi } from "src/services/apis";
+import { getTxListQueryKey, Tx } from "src/types/transaction";
 
-const useGetTxList = (scroll: number | undefined = 0) => {
+const useGetTxList = (scrollCount: number | undefined = 0) => {
   const [txList, setTxList] = useState<Tx[]>([]);
   const { data, isFetching } = useQuery(
-    [getTxListQueryKey, { scroll }],
+    [getTxListQueryKey, { scrollCount }],
     getTxListApi,
     {
       suspense: false,
@@ -22,7 +22,7 @@ const useGetTxList = (scroll: number | undefined = 0) => {
     data && setTxList((prev) => [...prev, ...data]);
   }, [data]);
 
-  return { data: txList, isFetching };
+  return { txList, isFetching };
 };
 
 export default useGetTxList;

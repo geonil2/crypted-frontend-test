@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-import ScrollToTop from "src/components/scrollToTop/ScrollToTop";
+import ScrollToTop from "src/components/scrollToTop";
 import { GlobalAlert } from "src/components/globalAlert";
 import Router from "src/routes";
 

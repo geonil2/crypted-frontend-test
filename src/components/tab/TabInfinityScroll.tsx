@@ -4,9 +4,8 @@ import styled from "styled-components";
 import useGetTxList from "src/hooks/useGetTxList";
 import useIntersectionObserver from "src/hooks/useIntersectionObserver";
 
-import TabTxListLoadingUI from "src/components/loadingUI/skeletonUI/TabTxListLoadingUI";
-import CryptedTabBody from "src/components/tab/CryptedTabBody";
-import TabTxList from "src/components/tab/TabTxList";
+import { TabTxListLoadingUI } from "src/components/loadingUI/skeletonUI";
+import { CryptedTabBody, TabTxList } from "src/components/tab";
 
 import { CryptedCommonTabProp } from "src/types/CryptedCommonTabProp";
 
@@ -29,7 +28,7 @@ const TabInfinityScroll = (props: CryptedCommonTabProp) => {
     setScroll((prev) => prev + 1);
     scrollTargetRef.current && unobserve(scrollTargetRef.current);
   });
-  const { data: txList, isFetching } = useGetTxList(scroll);
+  const { txList, isFetching } = useGetTxList(scroll);
 
   useEffect(() => {
     scrollTargetRef.current && observe(scrollTargetRef.current);

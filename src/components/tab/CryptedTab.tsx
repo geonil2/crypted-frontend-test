@@ -1,6 +1,6 @@
 import React, { ReactElement, useMemo, useState } from "react";
 
-import CryptedTabHeader from "src/components/tab/CryptedTabHeader";
+import { CryptedTabHeader } from "src/components/tab";
 
 interface CryptedTabProps {
   children: ReactElement[];

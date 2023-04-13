@@ -1,6 +1,7 @@
+import React from "react";
 import { firstLetterUppercase } from "@geonil2/util-func";
 import { COLORS, MEDIA } from "src/config/styles";
-import { Tx } from "src/services/transaction/types";
+import { Tx } from "src/types/transaction";
 import styled from "styled-components";
 
 import KokTicker from "src/assets/images/kok.png";
@@ -40,6 +41,7 @@ const Symbol = styled.span`
   display: flex;
   align-items: center;
 `;
+
 const Ticker = styled.img`
   width: 20px;
   height: 20px;

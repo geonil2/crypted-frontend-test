@@ -8,8 +8,9 @@ import {
 } from "react";
 import styled from "styled-components";
 
-import { ScreenOverlay } from "src/components/screenOverlay";
 import { COLORS, MEDIA } from "src/config/styles";
+
+import ScreenOverlay from "src/components/screenOverlay";
 
 const AlertCtnr = styled.div`
   display: flex;

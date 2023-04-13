@@ -1,9 +1,10 @@
 import { ElementType, lazy } from "react";
 import { useRoutes } from "react-router-dom";
 
-import AsyncBoundary from "src/components/asyncBoundary/AsyncBoundary";
 import ErrorPage from "src/pages/ErrorPage";
-import { SpinnerUI } from "src/components/loadingUI";
+
+import AsyncBoundary from "src/components/asyncBoundary";
+import SpinnerUI from "src/components/loadingUI";
 import HomeLayout from "src/components/layout/HomeLayout";
 
 const Loadable = (Component: ElementType) => (props: any) => {
